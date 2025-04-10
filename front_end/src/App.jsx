@@ -8,7 +8,8 @@
     import Footer from './Footer';
     import SignIn from './logIn'; // Adjust path if necessary
     import SignUp from './SignUp';
-    
+    import Cart from './Cart/cart-detail';
+    import Profile from './profile-management/update-profile';
     function App() {
       return (
         <Router>
@@ -25,7 +26,8 @@
             <Route path="/new-arrivals" element={<Display />} />
             <Route path="/top-selling" element={<Top_selling />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/cart" element={<SignUp />} />
+            <Route path="/cart" element={<Cart/>} />
+            <Route path="/profile" element={<Profile/>} />
             {/* Add more routes as needed */}
           </Routes>
           <Footer />
