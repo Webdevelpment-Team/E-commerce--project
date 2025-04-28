@@ -1,33 +1,38 @@
 import React from "react";
 
+// 🖼️ Import images properly
+import TshirtImage from "../assets/tsirt.png";
+import TrouserImage from "../assets/trosure.png";
+import DressImage from "../assets/dress.png";
+
 function Display() {
   const products = [
     {
       id: 1,
       name: "T-SHIRT WITH TAPE DETAILS",
       price: "$5",
-      image: "/src/assets/tsirt.png",
+      image: TshirtImage,
       rating: 5.0,
     },
     {
       id: 2,
-      name: "Work Trouser ",
+      name: "Work Trouser",
       price: "$15",
-      image: "/src/assets/trosure.png",
+      image: TrouserImage,
       rating: 4.8,
     },
     {
       id: 3,
-      name: "Taylor Linen Dress ",
+      name: "Taylor Linen Dress",
       price: "$22",
-      image: "/src/assets/dress.png",
+      image: DressImage,
       rating: 4.5,
     },
     {
-      id: 3,
-      name: "Taylor Linen Dress ",
+      id: 4,
+      name: "Taylor Linen Dress",  // You had duplicate id=3, I changed this id to 4
       price: "$22",
-      image: "/src/assets/dress.png",
+      image: DressImage,
       rating: 4.5,
     }
   ];
@@ -35,11 +40,12 @@ function Display() {
   return (
     <div className="w-full min-h-screen bg-white-100">
       {/* New Arrivals */}
-      <section className="mx-auto  py-8 px-8 ">
+      <section className="mx-auto py-8 px-8">
         <h2 className="text-3xl font-bold text-center mb-5">New Arrivals</h2>
         <div className="flex grid-cols-4 justify-center gap-8">
           {products.map((product) => (
             <div
+              data-aos="zoom-in"
               key={product.id}
               className="w-85 bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-lg transition-all duration-300"
             >
